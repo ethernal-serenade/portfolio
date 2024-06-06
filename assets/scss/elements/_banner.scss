@@ -464,7 +464,7 @@
         .slider-wrapper {
             padding-top: 210px;
             display: flex;
-            justify-content: space-between;
+            /*justify-content: space-between;*/
 
             @media #{$smlg-device} {
                 padding-top: 126px;

@@ -40,7 +40,7 @@
     border-radius: 10px;
     background: var(--background-color-1);
     box-shadow: var(--shadow-1);
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 
     @media #{$md-layout} {
         margin-top: 0;
@@ -244,7 +244,7 @@
                 .heading {
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
+                    /*justify-content: space-between;*/
                     border-bottom: 1px solid #1a1d23;
                     padding-bottom: 20px;
                     margin-bottom: 20px;
@@ -359,7 +359,7 @@
 // experience style 2
 .experience-style-two {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: center;
     padding: 30px;
     box-shadow: var(--shadow-1);

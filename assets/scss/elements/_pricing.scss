@@ -21,7 +21,7 @@
         &.nav {
             background-color: var(--background-color-1);
             box-shadow: var(--shadow-1);
-            justify-content: space-between;
+            /*justify-content: space-between;*/
             margin: 0;
             padding: 0;
             border: 0;
@@ -118,7 +118,7 @@
     .pricing-header {
         display: flex;
         margin-top: 55px;
-        justify-content: space-between;
+        /*justify-content: space-between;*/
         align-items: center;
         margin-bottom: 40px;
 
@@ -195,7 +195,7 @@
         }
 
         .check-wrapper {
-            justify-content: space-between;
+            /*justify-content: space-between;*/
             display: flex;
 
             .left-area {
