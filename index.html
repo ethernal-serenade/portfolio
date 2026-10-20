@@ -1,800 +1,1226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>FullStack Developer - GIS Data Analysic - Personal Portfolio</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <!-- CSS 
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>FullStack Developer - GIS Data Analysic - Personal Portfolio</title>
+        <meta name="robots" content="noindex, follow" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+        <!-- CSS
     ============================================ -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/slick.css">
-    <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
-    <link rel="stylesheet" href="assets/css/vendor/aos.css">
-    <link rel="stylesheet" href="assets/css/plugins/feature.css">
-    <!-- Style css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/vendor/slick.css" />
+        <link rel="stylesheet" href="assets/css/vendor/slick-theme.css" />
+        <link rel="stylesheet" href="assets/css/vendor/aos.css" />
+        <link rel="stylesheet" href="assets/css/plugins/feature.css" />
+        <!-- Style css -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/enhancements.css" />
 
-    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-</head>
+        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    </head>
 
-<body class="template-color-1 home-sticky spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
-
-    <!-- start Header area -->
-    <div class="d-none d-xl-block">
-        <header class="rn-header-area d-flex align-items-start flex-column left-header-style">
-            <div class="logo-area">
-                <a href="index.html">
-                    <img src="assets/images/logo/avatar.jpg" alt="personal-logo">
-                </a>
+    <body
+        class="template-color-1 home-sticky spybody"
+        data-spy="scroll"
+        data-target=".navbar-example2"
+        data-offset="150"
+    >
+        <div class="site-controls">
+            <div class="lang-switch" role="group" aria-label="Language">
+                <button type="button" data-lang="en" aria-pressed="true">EN</button>
+                <button type="button" data-lang="vi" aria-pressed="false">VI</button>
             </div>
-            <nav id="sideNavs" class="mainmenu-nav navbar-example2">
-                <ul class="primary-menu nav nav-pills">
-                    <li class="nav-item"><a class="nav-link smoth-animation-two active" href="#home"><i
-                                data-feather="home"></i>My Name</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation-two" href="#features"> <i
-                                data-feather="briefcase"></i>My Features</a></li>
-                    <!--<li class="nav-item"><a class="nav-link smoth-animation-two" href="#portfolio"><i
+            <button
+                type="button"
+                class="theme-toggle"
+                id="themeToggle"
+                aria-pressed="true"
+                aria-label="Switch to light mode"
+            >
+                <svg
+                    class="icon-sun"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    aria-hidden="true"
+                >
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path
+                        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                    ></path>
+                </svg>
+                <svg
+                    class="icon-moon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    aria-hidden="true"
+                >
+                    <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- start Header area -->
+        <div class="d-none d-xl-block">
+            <header class="rn-header-area d-flex align-items-start flex-column left-header-style">
+                <div class="logo-area">
+                    <a href="index.html">
+                        <img src="assets/images/logo/avatar.jpg" alt="personal-logo" />
+                    </a>
+                </div>
+                <nav id="sideNavs" class="mainmenu-nav navbar-example2">
+                    <ul class="primary-menu nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link smoth-animation-two active" href="#home"
+                                ><i data-feather="home"></i><span data-i18n="nav.home">My Name</span></a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link smoth-animation-two" href="#features">
+                                <i data-feather="briefcase"></i><span data-i18n="nav.features">My Features</span></a
+                            >
+                        </li>
+                        <!--<li class="nav-item"><a class="nav-link smoth-animation-two" href="#portfolio"><i
                                 data-feather="layers"></i>My Portfolio</a></li>-->
-                    <li class="nav-item"><a class="nav-link smoth-animation-two" href="#resume"><i
-                                data-feather="users"></i>My Resume</a></li>
-                    <!--<li class="nav-item"><a class="nav-link smoth-animation-two" href="#clients"><i
+                        <li class="nav-item">
+                            <a class="nav-link smoth-animation-two" href="#resume"
+                                ><i data-feather="users"></i><span data-i18n="nav.resume">My Resume</span></a
+                            >
+                        </li>
+                        <!--<li class="nav-item"><a class="nav-link smoth-animation-two" href="#clients"><i
                                 data-feather="user"></i>Clients</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation-two" href="#pricing"><i
                                 data-feather="shopping-cart"></i>Pricing</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation-two" href="#blog"><i
                                 data-feather="image"></i>blog</a></li>-->
-                    <li class="nav-item"><a class="nav-link smoth-animation-two" href="#contacts"><i
-                                data-feather="message-circle"></i>Contact Me</a></li>
-                </ul>
-            </nav>
-            <div class="footer">
-                <div class="social-share-style-1">
-                    <span class="title">find with me</span>
-                    <ul class="social-share d-flex liststyle">
-                        <li class="facebook">
-                            <a href="https://www.facebook.com/bavuongdaradi.3990" target="_blank">
-                                <span class="iconify" data-icon="logos:facebook" style="font-size: 20px"></span>
-                            </a>
-                        </li>
-                        <li class="github">
-                            <a href="https://github.com/Ethernal-Serenade" target="_blank" style="background: #FFF">
-                                <span class="iconify" data-icon="logos:github-icon" style="font-size: 20px"></span>
-                            </a>
-                        </li>
-                        <li class="gmail">
-                            <a href="mailto:nguyenduclam0605@gmail.com" target="_blank">
-                                <span class="iconify" data-icon="logos:google-gmail"></span>
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link smoth-animation-two" href="#contacts"
+                                ><i data-feather="message-circle"></i><span data-i18n="nav.contact">Contact Me</span></a
+                            >
                         </li>
                     </ul>
+                </nav>
+                <div class="footer">
+                    <div class="social-share-style-1">
+                        <span class="title" data-i18n="nav.find">find with me</span>
+                        <ul class="social-share d-flex liststyle">
+                            <li class="facebook">
+                                <a href="https://www.facebook.com/bavuongdaradi.3990" target="_blank">
+                                    <span class="iconify" data-icon="logos:facebook" style="font-size: 20px"></span>
+                                </a>
+                            </li>
+                            <li class="github">
+                                <a href="https://github.com/Ethernal-Serenade" target="_blank" style="background: #fff">
+                                    <span class="iconify" data-icon="logos:github-icon" style="font-size: 20px"></span>
+                                </a>
+                            </li>
+                            <li class="gmail">
+                                <a href="mailto:nguyenduclam0605@gmail.com" target="_blank">
+                                    <span class="iconify" data-icon="logos:google-gmail"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </header>
-    </div>
-    <!-- start Header area end -->
+            </header>
+        </div>
+        <!-- start Header area end -->
 
-    <!-- Header Mobile Bar  -->
-    <div class="header-style-2 d-block d-xl-none">
-        <div class="row align-items-center">
-            <div class="col-6">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="assets/images/logo/logo.png" alt="Logo">
-                    </a>
+        <!-- Header Mobile Bar  -->
+        <div class="header-style-2 d-block d-xl-none">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo.png" alt="Logo" />
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="header-right text-right">
-                    <div class="hamberger-menu">
-                        <i id="menuBtn" class="feather-menu humberger-menu"></i>
+                <div class="col-6">
+                    <div class="header-right text-right">
+                        <div class="hamberger-menu">
+                            <i id="menuBtn" class="feather-menu humberger-menu"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Header Mobile Bar  -->
+        <!-- Header Mobile Bar  -->
 
-    <!-- Start Popup Mobile Menu  -->
-    <div class="popup-mobile-menu">
-        <div class="inner">
-            <div class="menu-top">
-                <div class="menu-header">
-                    <a class="logo" href="index.html">
-                        <img src="assets/images/logo/logos-circle.png" alt="Personal Portfolio">
-                    </a>
-                    <div class="close-button">
-                        <button class="close-menu-activation close"><i data-feather="x"></i></button>
+        <!-- Start Popup Mobile Menu  -->
+        <div class="popup-mobile-menu">
+            <div class="inner">
+                <div class="menu-top">
+                    <div class="menu-header">
+                        <a class="logo" href="index.html">
+                            <img src="assets/images/logo/logos-circle.png" alt="Personal Portfolio" />
+                        </a>
+                        <div class="close-button">
+                            <button class="close-menu-activation close"><i data-feather="x"></i></button>
+                        </div>
                     </div>
+                    <!--<p class="discription">Inbio is a personal portfolio template. You can customize all.</p>-->
                 </div>
-                <!--<p class="discription">Inbio is a personal portfolio template. You can customize all.</p>-->
-            </div>
-            <div class="content">
-                <ul class="primary-menu nav nav-pills">
-                    <li class="nav-item"><a class="nav-link smoth-animation-two active" href="#home">My Name</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation-two" href="#features">My Features</a></li>
-                    <!--<li class="nav-item"><a class="nav-link smoth-animation-two" href="#portfolio">My Portfolio</a></li>-->
-                    <li class="nav-item"><a class="nav-link smoth-animation-two" href="#resume">My Resume</a></li>
-                    <!--<li class="nav-item"><a class="nav-link smoth-animation-two" href="#clients">Clients</a></li>
+                <div class="content">
+                    <ul class="primary-menu nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link smoth-animation-two active" href="#home"
+                                ><span data-i18n="nav.home">My Name</span></a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link smoth-animation-two" href="#features"
+                                ><span data-i18n="nav.features">My Features</span></a
+                            >
+                        </li>
+                        <!--<li class="nav-item"><a class="nav-link smoth-animation-two" href="#portfolio">My Portfolio</a></li>-->
+                        <li class="nav-item">
+                            <a class="nav-link smoth-animation-two" href="#resume"
+                                ><span data-i18n="nav.resume">My Resume</span></a
+                            >
+                        </li>
+                        <!--<li class="nav-item"><a class="nav-link smoth-animation-two" href="#clients">Clients</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation-two" href="#pricing">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation-two" href="#blog">blog</a></li>-->
-                    <li class="nav-item"><a class="nav-link smoth-animation-two" href="#contacts">Contact Me</a></li>
-                </ul>
-                <!-- social sharea area -->
-                <div class="social-share-style-1 mt--40">
-                    <span class="title">find with me</span>
-                    <ul class="social-share d-flex liststyle">
-                        <li class="facebook">
-                            <a href="https://www.facebook.com/bavuongdaradi.3990" target="_blank">
-                                <span class="iconify" data-icon="logos:facebook" style="font-size: 20px"></span>
-                            </a>
-                        </li>
-                        <li class="github">
-                            <a href="https://github.com/Ethernal-Serenade" target="_blank" style="background: #FFF">
-                                <span class="iconify" data-icon="logos:github-icon" style="font-size: 20px"></span>
-                            </a>
-                        </li>
-                        <li class="gmail">
-                            <a href="mailto:nguyenduclam0605@gmail.com" target="_blank">
-                                <span class="iconify" data-icon="logos:google-gmail"></span>
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link smoth-animation-two" href="#contacts"
+                                ><span data-i18n="nav.contact">Contact Me</span></a
+                            >
                         </li>
                     </ul>
+                    <!-- social sharea area -->
+                    <div class="social-share-style-1 mt--40">
+                        <span class="title" data-i18n="nav.find">find with me</span>
+                        <ul class="social-share d-flex liststyle">
+                            <li class="facebook">
+                                <a href="https://www.facebook.com/bavuongdaradi.3990" target="_blank">
+                                    <span class="iconify" data-icon="logos:facebook" style="font-size: 20px"></span>
+                                </a>
+                            </li>
+                            <li class="github">
+                                <a href="https://github.com/Ethernal-Serenade" target="_blank" style="background: #fff">
+                                    <span class="iconify" data-icon="logos:github-icon" style="font-size: 20px"></span>
+                                </a>
+                            </li>
+                            <li class="gmail">
+                                <a href="mailto:nguyenduclam0605@gmail.com" target="_blank">
+                                    <span class="iconify" data-icon="logos:google-gmail"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end -->
                 </div>
-                <!-- end -->
             </div>
         </div>
-    </div>
-    <!-- End Popup Mobile Menu  -->
+        <!-- End Popup Mobile Menu  -->
 
-    <main class="page-wrapper-two">
+        <main class="page-wrapper-two">
+            <!-- start slider area -->
+            <section
+                id="home"
+                class="slider-style-6 web-developer height--100 rn-section-gap align-items-center with-particles bg_image bg_image--11"
+                data-black-overlay="5"
+            >
+                <canvas id="mesh-canvas" aria-hidden="true"></canvas>
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="banner-inner text-center">
+                                <h1 class="fs--100">NGUYEN DUC LAM</h1>
+                                <!-- type headline start-->
+                                <span class="cd-headline clip is-full-width">
+                                    <span data-i18n="hero.iam">I am a</span>
+                                    <!-- ROTATING TEXT -->
+                                    <span class="cd-words-wrapper">
+                                        <b class="is-visible" data-i18n="hero.role1">FullStack Developer.</b>
+                                        <b class="is-hidden" data-i18n="hero.role2">GIS Data Analyst</b>
+                                    </span>
+                                </span>
+                                <!-- type headline end -->
+                                <div class="button-area">
+                                    <a class="rn-btn shadow-none" href="#contacts">
+                                        <span data-i18n="hero.cta">CONTACT ME</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- start slider area End -->
 
-        <!-- start slider area -->
-        <section id="home" class="slider-style-6 web-developer height--100 rn-section-gap align-items-center with-particles bg_image bg_image--11" data-black-overlay="5">
-            <div id="particles-js"></div>
-            <div class="wrapper">
+            <!-- Start Service Area -->
+            <div class="rn-service-area rn-section-gap" id="features">
                 <div class="container">
                     <div class="row">
-                        <div class="banner-inner text-center">
-                            <h1 class="fs--100">NGUYEN DUC LAM</h1>
-                            <!-- type headline start-->
-                            <span class="cd-headline clip is-full-width">
-                                <span>I am a</span>
-                            <!-- ROTATING TEXT -->
-                            <span class="cd-words-wrapper">
-                                    <b class="is-visible">FullStack Developer.</b>
-                                    <b class="is-hidden">GIS Data Analyst</b>
-                                </span>
-                            </span>
-                            <!-- type headline end -->
-                            <div class="button-area">
-                                <a class="rn-btn shadow-none" href="#contacts">
-                                    <span>CONTACT ME</span>
-                                </a>
+                        <div class="col-lg-12">
+                            <div
+                                class="section-title text-center"
+                                data-aos="fade-up"
+                                data-aos-duration="500"
+                                data-aos-delay="100"
+                                data-aos-once="true"
+                            >
+                                <span class="subtitle" data-i18n="feat.kicker">Features</span>
+                                <h2 class="title" data-i18n="feat.title">What I Do</h2>
                             </div>
                         </div>
+                    </div>
+                    <div class="row row--25 mt_md--10 mt_sm--10">
+                        <!-- Start Single Service -->
+                        <div
+                            data-aos="fade-up"
+                            data-aos-duration="500"
+                            data-aos-delay="100"
+                            data-aos-once="true"
+                            class="col-lg-6 col-xl-6 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30"
+                        >
+                            <div class="rn-service">
+                                <div class="inner">
+                                    <div class="icon">
+                                        <i data-feather="menu"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">
+                                            <a href="#" data-i18n="feat.fs.title">Fullstack Developer</a>
+                                        </h4>
+                                        <p class="description" data-i18n="feat.fs.desc">Building software systems</p>
+                                        <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <a class="over-link" href="#"></a>
+                            </div>
+                        </div>
+                        <!-- End SIngle Service -->
+                        <!-- Start Single Service -->
+                        <div
+                            data-aos="fade-up"
+                            data-aos-duration="500"
+                            data-aos-delay="300"
+                            data-aos-once="true"
+                            class="col-lg-6 col-xl-6 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30"
+                        >
+                            <div class="rn-service">
+                                <div class="inner">
+                                    <div class="icon">
+                                        <i data-feather="book-open"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">
+                                            <a href="#" data-i18n="feat.gis.title">Data Analyst and GIS</a>
+                                        </h4>
+                                        <p class="description" data-i18n="feat.gis.desc">
+                                            Having skills in handling large, complex data and programming automatic
+                                            processing software
+                                        </p>
+                                        <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <a class="over-link" href="#"></a>
+                            </div>
+                        </div>
+                        <!-- End SIngle Service -->
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- start slider area End -->
+            <!-- End Service Area  -->
 
-        <!-- Start Service Area -->
-        <div class="rn-service-area rn-section-gap " id="features">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title text-center" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true">
-                            <span class="subtitle">Features</span>
-                            <h2 class="title">What I Do</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row--25 mt_md--10 mt_sm--10">
-
-                    <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-6 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="menu"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">Fullstack Developer</a></h4>
-                                    <p class="description">Building software systems</p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
+            <!-- Start Resume Area -->
+            <div class="rn-resume-area rn-section-gap section-separator" id="resume">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center">
+                                <span class="subtitle" data-i18n="resume.kicker">7+ Years of Experience</span>
+                                <h2 class="title" data-i18n="resume.title">My Resume</h2>
                             </div>
-                            <a class="over-link" href="#"></a>
                         </div>
                     </div>
-                    <!-- End SIngle Service -->
-                    <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="col-lg-6 col-xl-6 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="book-open"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">Data Analyst and GIS</a></h4>
-                                    <p class="description">Having skills in handling large, complex data and programming automatic processing software</p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <a class="over-link" href="#"></a>
-                        </div>
-                    </div>
-                    <!-- End SIngle Service -->
-                </div>
-            </div>
-        </div>
-        <!-- End Service Area  -->
-        
-        <!-- Start Resume Area -->
-        <div class="rn-resume-area rn-section-gap section-separator" id="resume">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title text-center">
-                            <span class="subtitle">5+ Years of Experience</span>
-                            <h2 class="title">My Resume</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt--45">
-                    <div class="col-lg-12">
-                        <ul class="rn-nav-list nav nav-tabs" id="myTabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="education-job-tab" data-toggle="tab" href="#education-job" role="tab" aria-controls="education-job" aria-selected="true">education and job</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="professional-tab" data-toggle="tab" href="#professional" role="tab" aria-controls="professional" aria-selected="false">professional
-                                    Skills</a>
-                            </li>
-                            <!--<li class="nav-item">
+                    <div class="row mt--45">
+                        <div class="col-lg-12">
+                            <ul class="rn-nav-list nav nav-tabs" id="myTabs" role="tablist">
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link active"
+                                        id="education-job-tab"
+                                        data-toggle="tab"
+                                        href="#education-job"
+                                        role="tab"
+                                        aria-controls="education-job"
+                                        aria-selected="true"
+                                        data-i18n="resume.tab.edu"
+                                        >education and job</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link"
+                                        id="professional-tab"
+                                        data-toggle="tab"
+                                        href="#professional"
+                                        role="tab"
+                                        aria-controls="professional"
+                                        aria-selected="false"
+                                        data-i18n="resume.tab.skills"
+                                        >professional Skills</a
+                                    >
+                                </li>
+                                <!--<li class="nav-item">
                                 <a class="nav-link" id="experience-tab" data-toggle="tab" href="#experience" role="tab" aria-controls="experience" aria-selected="false">experience</a>
                             </li>-->
-                            <!--<li class="nav-item">
+                                <!--<li class="nav-item">
                                 <a class="nav-link" id="interview-tab" data-toggle="tab" href="#interview" role="tab" aria-controls="interview" aria-selected="false">interview</a>
                             </li>-->
-                        </ul>
-                        <!-- Start Tab Content Wrapper  -->
-                        <div class="rn-nav-content tab-content" id="myTabContents">
-                            <!-- Start Single Tab  -->
-                            <div class="tab-pane show active fade single-tab-area" id="education-job" role="tabpanel" aria-labelledby="education-job-tab">
-                                <div class="personal-experience-inner mt--40">
-                                    <div class="row">
-                                        <!-- Start Skill List Area  -->
-                                        <div class="col-lg-6 col-md-12 col-12">
-                                            <div class="content">
-                                                <span class="subtitle">2016 - 2020</span>
-                                                <h4 class="maintitle">Education Quality</h4>
-                                                <div class="experience-list">
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Graduated with excellence</h4>
-                                                                    <span>Ho Chi Minh City University of Social Sciences and Humanities</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>9.01/10</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>5 Good Student Awards</h4>
-                                                                    <span>Ho Chi Minh City University of Social Sciences and Humanities</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Participate in the Young Informatics and ICPC programming competition</h4>
-                                                                    <span>Ho Chi Minh City University of Social Sciences and Humanities</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">
-                                                                <span>Young informatics consolation prize at the 3-region national qualifying round</span>
-                                                                <span>Second team prize in the ICPC ASIA Southeast Asia qualifying competition</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Skill List Area  -->
-
-                                        <!-- Start Skill List Area 2nd  -->
-                                        <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
-                                            <div class="content">
-                                                <span class="subtitle">2019 - 2024</span>
-                                                <h4 class="maintitle">Job Experience</h4>
-                                                <div class="experience-list">
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Python, R and PHP Web Developer</h4>
-                                                                    <span>Ho Chi Minh City Space Technology Application Center</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>06/2019</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>01/2020</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    <span>Support researchers to build automatic processing tools
-                                                                    Remote sensing and GIS images, automating statistical calculations</span>
-                                                                </a>
-                                                                <br>
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    <span>Building WebGIS, WebMap in the fields of Irrigation and Remote Sensing</span>
-                                                                </a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Python and PHP Web Developer</h4>
-                                                                    <span>Southern Information Technology Application Center</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>04/2020</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>11/2022</span>
+                            </ul>
+                            <!-- Start Tab Content Wrapper  -->
+                            <div class="rn-nav-content tab-content" id="myTabContents">
+                                <!-- Start Single Tab  -->
+                                <div
+                                    class="tab-pane show active fade single-tab-area"
+                                    id="education-job"
+                                    role="tabpanel"
+                                    aria-labelledby="education-job-tab"
+                                >
+                                    <div class="personal-experience-inner mt--40">
+                                        <div class="row">
+                                            <!-- Start Skill List Area  -->
+                                            <div class="col-lg-6 col-md-12 col-12">
+                                                <div class="content">
+                                                    <span class="subtitle">2016 - 2020</span>
+                                                    <h4 class="maintitle" data-i18n="edu.title">Education Quality</h4>
+                                                    <div class="experience-list">
+                                                        <!-- Start Single List  -->
+                                                        <div class="resume-single-list">
+                                                            <div class="inner">
+                                                                <div class="heading">
+                                                                    <div class="title">
+                                                                        <h4 data-i18n="edu.grad.title">
+                                                                            Graduated with excellence
+                                                                        </h4>
+                                                                        <span data-i18n="edu.school"
+                                                                            >Ho Chi Minh City University of Social
+                                                                            Sciences and Humanities</span
+                                                                        >
                                                                     </div>
+                                                                    <div class="date-of-time">
+                                                                        <span>9.01/10</span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <p class="description">
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Support construction data specialists in building automated processing of GIS and land use document files
-                                                                </a>
-                                                                <br>
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Building an automatic data transfer tool (Python FTP)
-                                                                </a>
-                                                                <br>
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Building a file storage API (Fast API + MinIO)
-                                                                </a>
-                                                                <br>
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Build Excel template processing API (Fast API + Pandas)
-                                                                </a>
-                                                                <br>
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Build tools to automate data entry and check Excel with Python
-                                                                </a>
-                                                                <br>
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Building WebGIS, WebMap in the field of environmental resources (Water Resources, Environment, Minerals, Land...)
-                                                                </a>
-                                                            </p>
                                                         </div>
-                                                    </div>
+                                                        <!-- End Single List  -->
 
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>WebGIS programmer (C#, Javascript React and Python)</h4>
-                                                                    <span>Intelli Software Technology Joint Stock Company</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>11/2022</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>02/2023</span>
+                                                        <!-- Start Single List  -->
+                                                        <div class="resume-single-list">
+                                                            <div class="inner">
+                                                                <div class="heading">
+                                                                    <div class="title">
+                                                                        <h4 data-i18n="edu.award.title">
+                                                                            5 Good Student Awards
+                                                                        </h4>
+                                                                        <span data-i18n="edu.school"
+                                                                            >Ho Chi Minh City University of Social
+                                                                            Sciences and Humanities</span
+                                                                        >
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <p class="description">
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Build tools to automatically check and backup Arcgis Geodatabase data
-                                                                </a>
-                                                                <br>
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Building interfaces and functions of water supply and drainage incident management software (Ticket System Management)
-                                                                </a>
-                                                            </p>
                                                         </div>
-                                                    </div>
+                                                        <!-- End Single List  -->
 
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Technical Leader - Fullstack Web Developer</h4>
-                                                                    <span>Southern Information Technology and Data Application Center</span>
+                                                        <!-- Start Single List  -->
+                                                        <div class="resume-single-list">
+                                                            <div class="inner">
+                                                                <div class="heading">
+                                                                    <div class="title">
+                                                                        <h4 data-i18n="edu.contest.title">
+                                                                            Participate in the Young Informatics and
+                                                                            ICPC programming competition
+                                                                        </h4>
+                                                                        <span data-i18n="edu.school"
+                                                                            >Ho Chi Minh City University of Social
+                                                                            Sciences and Humanities</span
+                                                                        >
+                                                                    </div>
                                                                 </div>
-                                                                <div class="date-of-time">
-                                                                    <span>03/2023</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>06/2024</span>
-                                                                </div>
+                                                                <p class="description">
+                                                                    <span data-i18n="edu.contest.p1"
+                                                                        >Young informatics consolation prize at the
+                                                                        3-region national qualifying round</span
+                                                                    >
+                                                                    <span data-i18n="edu.contest.p2"
+                                                                        >Second team prize in the ICPC ASIA Southeast
+                                                                        Asia qualifying competition</span
+                                                                    >
+                                                                </p>
                                                             </div>
-                                                            <p class="description">
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Building and developing Tra Vinh Province Database Sharing Portal software (Geonetwork)
-                                                                </a>
-                                                                <br>
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Construction and development of software system for Terminal Entry and Exit Management for passenger buses at Mien Tay Bus Station
-                                                                </a>
-                                                            </p>
                                                         </div>
+                                                        <!-- End Single List  -->
                                                     </div>
-													
-													<div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Technical Leader</h4>
-                                                                    <span>West Coach Station Joint Stock Company</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Skill List Area  -->
+
+                                            <!-- Start Skill List Area 2nd  -->
+                                            <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
+                                                <div class="content">
+                                                    <span class="subtitle">2019 - 2024</span>
+                                                    <h4 class="maintitle" data-i18n="job.title">Job Experience</h4>
+                                                    <div class="experience-list">
+                                                        <!-- Start Single List  -->
+                                                        <div class="resume-single-list">
+                                                            <div class="inner">
+                                                                <div class="heading">
+                                                                    <div class="title">
+                                                                        <h4 data-i18n="job1.title">
+                                                                            Python, R and PHP Web Developer
+                                                                        </h4>
+                                                                        <span data-i18n="job1.org"
+                                                                            >Ho Chi Minh City Space Technology
+                                                                            Application Center</span
+                                                                        >
+                                                                    </div>
+                                                                    <div class="date-of-time">
+                                                                        <span>06/2019</span>
+                                                                    </div>
+                                                                    <div class="date-of-time">
+                                                                        <span>01/2020</span>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="date-of-time">
-                                                                    <span>07/2024</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>Now</span>
-                                                                </div>
+                                                                <p class="description">
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job1.d1"
+                                                                            >Support researchers to build automatic
+                                                                            processing tools Remote sensing and GIS
+                                                                            images, automating statistical
+                                                                            calculations</span
+                                                                        >
+                                                                    </a>
+                                                                    <br />
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job1.d2"
+                                                                            >Building WebGIS, WebMap in the fields of
+                                                                            Irrigation and Remote Sensing</span
+                                                                        >
+                                                                    </a>
+                                                                </p>
                                                             </div>
-                                                            <p class="description">
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-																	Continue software development Bus Station Management
-                                                                </a>
-                                                                <br>
-                                                                <a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Programming and deployment KPI Software 
-                                                                </a>
-																<br>
-																<a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Programming and deployment Work Handover Software 
-                                                                </a>
-																<br>
-																<a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Programming and deployment Booking Bus System
-                                                                </a>
-																<br>
-																<a href="">
-                                                                    <i class="feather feather-link"></i>
-                                                                    Programming and deployment Booking Flight/Train System
-                                                                </a>
-                                                            </p>
+                                                        </div>
+                                                        <!-- End Single List  -->
+
+                                                        <div class="resume-single-list">
+                                                            <div class="inner">
+                                                                <div class="heading">
+                                                                    <div class="title">
+                                                                        <h4 data-i18n="job2.title">
+                                                                            Python and PHP Web Developer
+                                                                        </h4>
+                                                                        <span data-i18n="job2.org"
+                                                                            >Southern Information Technology Application
+                                                                            Center</span
+                                                                        >
+                                                                    </div>
+                                                                    <div class="date-of-time">
+                                                                        <span>04/2020</span>
+                                                                    </div>
+                                                                    <div class="date-of-time">
+                                                                        <span>11/2022</span>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="description">
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job2.d1"
+                                                                            >Support construction data specialists in
+                                                                            building automated processing of GIS and
+                                                                            land use document files</span
+                                                                        >
+                                                                    </a>
+                                                                    <br />
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job2.d2"
+                                                                            >Building an automatic data transfer tool
+                                                                            (Python FTP)</span
+                                                                        >
+                                                                    </a>
+                                                                    <br />
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job2.d3"
+                                                                            >Building a file storage API (Fast API +
+                                                                            MinIO)</span
+                                                                        >
+                                                                    </a>
+                                                                    <br />
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job2.d4"
+                                                                            >Build Excel template processing API (Fast
+                                                                            API + Pandas)</span
+                                                                        >
+                                                                    </a>
+                                                                    <br />
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job2.d5"
+                                                                            >Build tools to automate data entry and
+                                                                            check Excel with Python</span
+                                                                        >
+                                                                    </a>
+                                                                    <br />
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job2.d6"
+                                                                            >Building WebGIS, WebMap in the field of
+                                                                            environmental resources (Water Resources,
+                                                                            Environment, Minerals, Land...)</span
+                                                                        >
+                                                                    </a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="resume-single-list">
+                                                            <div class="inner">
+                                                                <div class="heading">
+                                                                    <div class="title">
+                                                                        <h4 data-i18n="job3.title">
+                                                                            WebGIS programmer (C#, Javascript React and
+                                                                            Python)
+                                                                        </h4>
+                                                                        <span data-i18n="job3.org"
+                                                                            >Intelli Software Technology Joint Stock
+                                                                            Company</span
+                                                                        >
+                                                                    </div>
+                                                                    <div class="date-of-time">
+                                                                        <span>11/2022</span>
+                                                                    </div>
+                                                                    <div class="date-of-time">
+                                                                        <span>02/2023</span>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="description">
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job3.d1"
+                                                                            >Build tools to automatically check and
+                                                                            backup Arcgis Geodatabase data</span
+                                                                        >
+                                                                    </a>
+                                                                    <br />
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job3.d2"
+                                                                            >Building interfaces and functions of water
+                                                                            supply and drainage incident management
+                                                                            software (Ticket System Management)</span
+                                                                        >
+                                                                    </a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="resume-single-list">
+                                                            <div class="inner">
+                                                                <div class="heading">
+                                                                    <div class="title">
+                                                                        <h4 data-i18n="job4.title">
+                                                                            Technical Leader - Fullstack Web Developer
+                                                                        </h4>
+                                                                        <span data-i18n="job4.org"
+                                                                            >Southern Information Technology and Data
+                                                                            Application Center</span
+                                                                        >
+                                                                    </div>
+                                                                    <div class="date-of-time">
+                                                                        <span>03/2023</span>
+                                                                    </div>
+                                                                    <div class="date-of-time">
+                                                                        <span>06/2024</span>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="description">
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job4.d1"
+                                                                            >Building and developing Tra Vinh Province
+                                                                            Database Sharing Portal software
+                                                                            (Geonetwork)</span
+                                                                        >
+                                                                    </a>
+                                                                    <br />
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job4.d2"
+                                                                            >Construction and development of software
+                                                                            system for Terminal Entry and Exit
+                                                                            Management for passenger buses at Mien Tay
+                                                                            Bus Station</span
+                                                                        >
+                                                                    </a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="resume-single-list">
+                                                            <div class="inner">
+                                                                <div class="heading">
+                                                                    <div class="title">
+                                                                        <h4 data-i18n="job5.title">Technical Leader</h4>
+                                                                        <span data-i18n="job5.org"
+                                                                            >West Coach Station Joint Stock
+                                                                            Company</span
+                                                                        >
+                                                                    </div>
+                                                                    <div class="date-of-time">
+                                                                        <span>07/2024</span>
+                                                                    </div>
+                                                                    <div class="date-of-time">
+                                                                        <span data-i18n="job.now">Now</span>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="description">
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job5.d1"
+                                                                            >Continue software development Bus Station
+                                                                            Management</span
+                                                                        >
+                                                                    </a>
+                                                                    <br />
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job5.d2"
+                                                                            >Programming and deployment KPI
+                                                                            Software</span
+                                                                        >
+                                                                    </a>
+                                                                    <br />
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job5.d3"
+                                                                            >Programming and deployment Work Handover
+                                                                            Software</span
+                                                                        >
+                                                                    </a>
+                                                                    <br />
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job5.d4"
+                                                                            >Programming and deployment Booking Bus
+                                                                            System</span
+                                                                        >
+                                                                    </a>
+                                                                    <br />
+                                                                    <a href="">
+                                                                        <i class="feather feather-link"></i>
+                                                                        <span data-i18n="job5.d5"
+                                                                            >Programming and deployment Booking
+                                                                            Flight/Train System</span
+                                                                        >
+                                                                    </a>
+                                                                </p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- End Skill List Area  -->
                                         </div>
-                                        <!-- End Skill List Area  -->
                                     </div>
                                 </div>
-                            </div>
-                            <!-- End Single Tab  -->
+                                <!-- End Single Tab  -->
 
-                            <!-- Start Single Tab  -->
-                            <div class="tab-pane fade " id="professional" role="tabpanel" aria-labelledby="professional-tab">
-                                <div class="personal-experience-inner mt--40">
-                                    <div class="row row--40">
-
-                                        <!-- Start Single Progressbar  -->
-                                        <div class="col-lg-6 col-md-6 col-12">
-                                            <div class="progress-wrapper">
-                                                <div class="content">
-                                                    <span class="subtitle">Features</span>
-                                                    <h4 class="maintitle">GIS Skill</h4>
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">PostGIS</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.6s" data-wow-delay=".4s" role="progressbar" style="width: 100%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">100%</span></div>
+                                <!-- Start Single Tab  -->
+                                <div
+                                    class="tab-pane fade"
+                                    id="professional"
+                                    role="tabpanel"
+                                    aria-labelledby="professional-tab"
+                                >
+                                    <div class="personal-experience-inner mt--40">
+                                        <div class="row row--40">
+                                            <!-- Start Single Progressbar  -->
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <div class="progress-wrapper">
+                                                    <div class="content">
+                                                        <span class="subtitle" data-i18n="skills.kicker">Features</span>
+                                                        <h4 class="maintitle" data-i18n="skills.gis">GIS Skill</h4>
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">PostGIS</h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.6s"
+                                                                    data-wow-delay=".4s"
+                                                                    role="progressbar"
+                                                                    style="width: 100%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">100%</span>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-													
-													<!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">Geoserver</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar" style="width: 100%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">100%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
+                                                        <!-- End Single Progress Charts -->
 
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">ArcGIS, QGIS, MapInfo</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay=".5s" role="progressbar" style="width: 100%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">100%</span></div>
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">Geoserver</h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.5s"
+                                                                    data-wow-delay=".3s"
+                                                                    role="progressbar"
+                                                                    style="width: 100%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">100%</span>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
+                                                        <!-- End Single Progress Charts -->
 
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">ArcGIS, QGIS, MapInfo</h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.7s"
+                                                                    data-wow-delay=".5s"
+                                                                    role="progressbar"
+                                                                    style="width: 100%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">100%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Single Progress Charts -->
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- End Single Progressbar  -->
+                                            <!-- End Single Progressbar  -->
 
-                                        <!-- Start Single Progressbar  -->
-                                        <div class="col-lg-6 col-md-6 col-12 mt_sm--60">
-                                            <div class="progress-wrapper">
-                                                <div class="content">
-                                                    <span class="subtitle">Features</span>
-                                                    <h4 class="maintitle">Development Skill</h4>
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">C#, C++, C</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar" style="width: 100%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">100%</span></div>
+                                            <!-- Start Single Progressbar  -->
+                                            <div class="col-lg-6 col-md-6 col-12 mt_sm--60">
+                                                <div class="progress-wrapper">
+                                                    <div class="content">
+                                                        <span class="subtitle" data-i18n="skills.kicker">Features</span>
+                                                        <h4 class="maintitle" data-i18n="skills.dev">
+                                                            Development Skill
+                                                        </h4>
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">C#, C++, C</h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.5s"
+                                                                    data-wow-delay=".3s"
+                                                                    role="progressbar"
+                                                                    style="width: 100%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">100%</span>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
+                                                        <!-- End Single Progress Charts -->
 
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">JavaScript Backend (NestJS, NodeJS)</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.6s" data-wow-delay=".4s" role="progressbar" style="width: 100%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">100%</span></div>
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">
+                                                                JavaScript Backend (NestJS, NodeJS)
+                                                            </h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.6s"
+                                                                    data-wow-delay=".4s"
+                                                                    role="progressbar"
+                                                                    style="width: 100%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">100%</span>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
+                                                        <!-- End Single Progress Charts -->
 
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">JavaScript Frontend (Pure JS, Jquery, React, Vue)</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay=".5s" role="progressbar" style="width: 99%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">99%</span></div>
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">
+                                                                JavaScript Frontend (Pure JS, Jquery, React, Vue)
+                                                            </h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.7s"
+                                                                    data-wow-delay=".5s"
+                                                                    role="progressbar"
+                                                                    style="width: 99%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">99%</span>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
+                                                        <!-- End Single Progress Charts -->
 
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">Python (Web framework, Data Analysic, Basic AI)</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".6s" role="progressbar" style="width: 99%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">99%</span></div>
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">
+                                                                Python (Web framework, Data Analysic, Basic AI)
+                                                            </h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.8s"
+                                                                    data-wow-delay=".6s"
+                                                                    role="progressbar"
+                                                                    style="width: 99%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">99%</span>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
+                                                        <!-- End Single Progress Charts -->
 
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">Java (Spring)</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay=".7s" role="progressbar" style="width: 95%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">95%</span></div>
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">Java (Spring)</h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.9s"
+                                                                    data-wow-delay=".7s"
+                                                                    role="progressbar"
+                                                                    style="width: 95%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">95%</span>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-                                                    
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">PHP Laravel</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay=".7s" role="progressbar" style="width: 99%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">99%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-                                                    
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">R (Data Analysic)</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay=".7s" role="progressbar" style="width: 100%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">100%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-                                                    
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">Rust</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay=".7s" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">80%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-                                                    
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">Ruby on Rails</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay=".7s" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">80%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-                                                    
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">Docker, CI/CD, Git, Github</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay=".7s" role="progressbar" style="width: 100%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">100%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-													
-													<!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">SQL Server</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.6s" data-wow-delay=".4s" role="progressbar" style="width: 100%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">100%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
-													
-													<!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">PostgreSQL</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.6s" data-wow-delay=".4s" role="progressbar" style="width: 100%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">100%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
+                                                        <!-- End Single Progress Charts -->
 
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">PHP Laravel</h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.9s"
+                                                                    data-wow-delay=".7s"
+                                                                    role="progressbar"
+                                                                    style="width: 99%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">99%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Single Progress Charts -->
+
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">R (Data Analysic)</h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.9s"
+                                                                    data-wow-delay=".7s"
+                                                                    role="progressbar"
+                                                                    style="width: 100%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">100%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Single Progress Charts -->
+
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">Rust</h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.9s"
+                                                                    data-wow-delay=".7s"
+                                                                    role="progressbar"
+                                                                    style="width: 80%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">80%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Single Progress Charts -->
+
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">Ruby on Rails</h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.9s"
+                                                                    data-wow-delay=".7s"
+                                                                    role="progressbar"
+                                                                    style="width: 80%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">80%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Single Progress Charts -->
+
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">
+                                                                Docker, CI/CD, Git, Github
+                                                            </h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.9s"
+                                                                    data-wow-delay=".7s"
+                                                                    role="progressbar"
+                                                                    style="width: 100%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">100%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Single Progress Charts -->
+
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">SQL Server</h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.6s"
+                                                                    data-wow-delay=".4s"
+                                                                    role="progressbar"
+                                                                    style="width: 100%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">100%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Single Progress Charts -->
+
+                                                        <!-- Start Single Progress Charts -->
+                                                        <div class="progress-charts">
+                                                            <h6 class="heading heading-h6">PostgreSQL</h6>
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar wow fadeInLeft"
+                                                                    data-wow-duration="0.6s"
+                                                                    data-wow-delay=".4s"
+                                                                    role="progressbar"
+                                                                    style="width: 100%"
+                                                                    aria-valuenow="85"
+                                                                    aria-valuemin="0"
+                                                                    aria-valuemax="100"
+                                                                >
+                                                                    <span class="percent-label">100%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Single Progress Charts -->
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <!-- End Single Progressbar  -->
                                         </div>
-                                        <!-- End Single Progressbar  -->
-
                                     </div>
                                 </div>
+                                <!-- End Single Tab  -->
                             </div>
-                            <!-- End Single Tab  -->
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- End Resume Area -->
-        <!-- Start Contact section -->
-        <div class="rn-contact-area rn-section-gap section-separator" id="contacts">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title text-center">
-                            <span class="subtitle">Contact</span>
-                            <h2 class="title">Contact With Me</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt--50 mt_md--40 mt_sm--40 mt-contact-sm">
-                    <div class="col-lg-5">
-                        <div class="contact-about-area">
-                            <div class="thumbnail">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.257932503386!2d106.67676867577619!3d10.7915463589132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d4dfbcb923%3A0x3797376b7a284d79!2zMTUxLzMwIEh14buzbmggVsSDbiBCw6FuaCwgUGjGsOG7nW5nIDE0LCBRdeG6rW4gMywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1717636380501!5m2!1sen!2s"
-                                        width="460" height="288"
-                                        style="border:0;" allowfullscreen=""
-                                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                            <div class="title-area">
-                                <h4 class="title">Nguyen Duc Lam</h4>
-                            </div>
-                            <div class="description">
-                                <span class="phone">Phone: <a href="tel:0815985051">0815985051</a></span>
-                                <span class="mail">Email: <a href="mailto:nguyenduclam0605@gmail.com">nguyenduclam0605@gmail.com</a></span>
+            <!-- End Resume Area -->
+            <!-- Start Contact section -->
+            <div class="rn-contact-area rn-section-gap section-separator" id="contacts">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center">
+                                <span class="subtitle" data-i18n="contact.kicker">Contact</span>
+                                <h2 class="title" data-i18n="contact.title">Contact With Me</h2>
                             </div>
                         </div>
                     </div>
-                    <div data-aos-delay="600" class="col-lg-7 contact-input">
-                        <div class="contact-form-wrapper">
-                            <div class="introduce">
-
-                                <form class="rnt-contact-form rwt-dynamic-form row" id="contact-form" method="POST" action="mail.php">
-
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="contact-name">Your Name</label>
-                                            <input class="form-control form-control-lg" name="contact-name" id="contact-name" type="text">
+                    <div class="row mt--50 mt_md--40 mt_sm--40 mt-contact-sm">
+                        <div class="col-lg-5">
+                            <div class="contact-about-area">
+                                <div class="thumbnail">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.257932503386!2d106.67676867577619!3d10.7915463589132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d4dfbcb923%3A0x3797376b7a284d79!2zMTUxLzMwIEh14buzbmggVsSDbiBCw6FuaCwgUGjGsOG7nW5nIDE0LCBRdeG6rW4gMywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1717636380501!5m2!1sen!2s"
+                                        width="460"
+                                        height="288"
+                                        style="border: 0"
+                                        allowfullscreen=""
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                    ></iframe>
+                                </div>
+                                <div class="title-area">
+                                    <h4 class="title">Nguyen Duc Lam</h4>
+                                </div>
+                                <div class="description">
+                                    <span class="phone"
+                                        ><span data-i18n="contact.phone">Phone</span>:
+                                        <a href="tel:0815985051">0786499495</a></span
+                                    >
+                                    <span class="mail"
+                                        >Email:
+                                        <a href="mailto:nguyenduclam0605@gmail.com">nguyenduclam0605@gmail.com</a></span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos-delay="600" class="col-lg-7 contact-input">
+                            <div class="contact-form-wrapper">
+                                <div class="introduce">
+                                    <form
+                                        class="rnt-contact-form rwt-dynamic-form row"
+                                        id="contact-form"
+                                        method="POST"
+                                        action="mail.php"
+                                    >
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="contact-name" data-i18n="form.name">Your Name</label>
+                                                <input
+                                                    class="form-control form-control-lg"
+                                                    name="contact-name"
+                                                    id="contact-name"
+                                                    type="text"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="contact-phone">Phone Number</label>
-                                            <input class="form-control" name="contact-phone" id="contact-phone" type="text">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="contact-phone" data-i18n="form.phone">Phone Number</label>
+                                                <input
+                                                    class="form-control"
+                                                    name="contact-phone"
+                                                    id="contact-phone"
+                                                    type="text"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="contact-email">Email</label>
-                                            <input class="form-control form-control-sm" id="contact-email" name="contact-email" type="email">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label for="contact-email" data-i18n="form.email">Email</label>
+                                                <input
+                                                    class="form-control form-control-sm"
+                                                    id="contact-email"
+                                                    name="contact-email"
+                                                    type="email"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="subject">subject</label>
-                                            <input class="form-control form-control-sm" id="subject" name="subject" type="text">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label for="subject" data-i18n="form.subject">subject</label>
+                                                <input
+                                                    class="form-control form-control-sm"
+                                                    id="subject"
+                                                    name="subject"
+                                                    type="text"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="contact-message">Your Message</label>
-                                            <textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label for="contact-message" data-i18n="form.message"
+                                                    >Your Message</label
+                                                >
+                                                <textarea
+                                                    name="contact-message"
+                                                    id="contact-message"
+                                                    cols="30"
+                                                    rows="10"
+                                                ></textarea>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-lg-12">
-                                        <button name="submit" type="submit" id="submit" class="rn-btn">
-                                            <span>SEND MESSAGE</span>
-                                            <i data-feather="arrow-right"></i>
-                                        </button>
-                                    </div>
-                                </form>
+                                        <div class="col-lg-12">
+                                            <button name="submit" type="submit" id="submit" class="rn-btn">
+                                                <span data-i18n="form.send">SEND MESSAGE</span>
+                                                <i data-feather="arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- End Contuct section -->
+            <!-- End Contuct section -->
 
-        <!-- Start Footer Area -->
-        <!--<div class="rn-footer-area rn-section-gap section-separator">
+            <!-- Start Footer Area -->
+            <!--<div class="rn-footer-area rn-section-gap section-separator">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -812,201 +1238,82 @@
                 </div>
             </div>
         </div>-->
-        <!-- End Footer Area -->
-        <!-- modal area -->
-        <!-- Modal Portfolio Body area Start -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i data-feather="x"></i></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row align-items-center">
-
-                            <div class="col-lg-6">
-                                <div class="portfolio-popup-thumbnail">
-                                    <div class="image">
-                                        <img class="w-100" src="assets/images/portfolio/portfolio-04.jpg" alt="slide">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="text-content">
-                                    <h3>
-                                        <span>Featured - Design</span> App Design Development.
-                                    </h3>
-                                    <p class="mb--30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi.</p>
-                                    <p>Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!</p>
-                                    <div class="button-group mt--20">
-                                        <a href="#" class="rn-btn thumbs-icon">
-                                            <span>LIKE THIS</span>
-                                            <i data-feather="thumbs-up"></i>
-                                        </a>
-                                        <a href="#" class="rn-btn">
-                                            <span>VIEW PROJECT</span>
-                                            <i data-feather="chevron-right"></i>
-                                        </a>
-                                    </div>
-
-                                </div>
-                                <!-- End of .text-content -->
-                            </div>
+            <!-- End Footer Area -->
+            <!-- modal area -->
+            <!-- Modal Portfolio Body area Start -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><i data-feather="x"></i></span>
+                            </button>
                         </div>
-                        <!-- End of .row Body-->
+                        <div class="modal-body">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="portfolio-popup-thumbnail">
+                                        <div class="image">
+                                            <img
+                                                class="w-100"
+                                                src="assets/images/portfolio/portfolio-04.jpg"
+                                                alt="slide"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="text-content">
+                                        <h3><span>Featured - Design</span> App Design Development.</h3>
+                                        <p class="mb--30">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+                                            distinctio assumenda explicabo veniam temporibus eligendi.
+                                        </p>
+                                        <p>
+                                            Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias
+                                            suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!
+                                        </p>
+                                        <div class="button-group mt--20">
+                                            <a href="#" class="rn-btn thumbs-icon">
+                                                <span>LIKE THIS</span>
+                                                <i data-feather="thumbs-up"></i>
+                                            </a>
+                                            <a href="#" class="rn-btn">
+                                                <span>VIEW PROJECT</span>
+                                                <i data-feather="chevron-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- End of .text-content -->
+                                </div>
+                            </div>
+                            <!-- End of .row Body-->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- End Modal Portfolio area -->
-        <!-- Back to  top Start -->
-        <div class="backto-top">
-            <div>
-                <i data-feather="arrow-up"></i>
+            <!-- End Modal Portfolio area -->
+            <!-- Back to  top Start -->
+            <div class="backto-top">
+                <div>
+                    <i data-feather="arrow-up"></i>
+                </div>
             </div>
-        </div>
-        <!-- Back to top end -->
+            <!-- Back to top end -->
+        </main>
 
-    </main>
-
-    <!-- JS ============================================ -->
-    <script src="assets/js/vendor/jquery.js"></script>
-    <script src="assets/js/vendor/modernizer.min.js"></script>
-    <script src="assets/js/vendor/feather.min.js"></script>
-    <script src="assets/js/vendor/slick.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.js"></script>
-    <script src="assets/js/vendor/text-type.js"></script>
-    <script src="assets/js/vendor/wow.js"></script>
-    <script src="assets/js/vendor/aos.js"></script>
-    <script src="assets/js/vendor/particles.js"></script>
-    <!-- main JS -->
-    <script src="assets/js/main.js"></script>
-
-    <script>
-        particlesJS('particles-js',
-
-            {
-                "particles": {
-                    "number": {
-                        "value": 20,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
-                        }
-                    },
-                    "color": {
-                        "value": ["#ffffff", ]
-                    },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
-                        },
-                        "polygon": {
-                            "nb_sides": 4
-                        },
-                        "image": {
-                            "src": "img/github.svg",
-                            "width": 100,
-                            "height": 100
-                        }
-                    },
-                    "opacity": {
-                        "value": 0.8,
-                        "random": true,
-                        "anim": {
-                            "enable": false,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 4,
-                        "random": true,
-                        "anim": {
-                            "enable": false,
-                            "speed": 40,
-                            "size_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": false,
-                        "distance": 150,
-                        "color": "#ffffff",
-                        "opacity": 0.4,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 6,
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "attract": {
-                            "enable": false,
-                            "rotateX": 600,
-                            "rotateY": 1200
-                        }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "repulse"
-                        },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "push"
-                        },
-                        "resize": true
-                    },
-                    "modes": {
-                        "grab": {
-                            "distance": 400,
-                            "line_linked": {
-                                "opacity": 1
-                            }
-                        },
-                        "bubble": {
-                            "distance": 800,
-                            "size": 40,
-                            "duration": 2,
-                            "opacity": 8,
-                            "speed": 3
-                        },
-                        "repulse": {
-                            "distance": 200
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        },
-                        "remove": {
-                            "particles_nb": 2
-                        }
-                    }
-                },
-                "retina_detect": true,
-                "config_demo": {
-                    "hide_card": false,
-                    "background_color": "#b61924",
-                    "background_image": "",
-                    "background_position": "50% 50%",
-                    "background_repeat": "no-repeat",
-                    "background_size": "cover"
-                }
-            }
-
-        );
-    </script>
-</body>
-
+        <!-- JS ============================================ -->
+        <script src="assets/js/vendor/jquery.js"></script>
+        <script src="assets/js/vendor/modernizer.min.js"></script>
+        <script src="assets/js/vendor/feather.min.js"></script>
+        <script src="assets/js/vendor/slick.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.js"></script>
+        <script src="assets/js/vendor/text-type.js"></script>
+        <script src="assets/js/vendor/wow.js"></script>
+        <script src="assets/js/vendor/aos.js"></script>
+        <!-- main JS -->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/enhancements.js"></script>
+    </body>
 </html>
